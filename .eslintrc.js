@@ -13,9 +13,8 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:import/typescript',
-    'plugin:cypress/recommended',
-  ],
+    'plugin:import/typescript' 
+   ],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',

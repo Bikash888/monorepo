@@ -128,7 +128,7 @@ export const ButtonComponent: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   return (
-    <Wrapper  {...rest}>
+    <Wrapper {...rest}>
       <StyledButton onClick={onClick} htmlType={htmlType} {...rest}>
         {children}
       </StyledButton>

@@ -3,15 +3,31 @@
   "private": true,
   "devDependencies": {
     "@types/react": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
     "lerna": "^3.22.1",
     "next-transpile-modules": "^4.1.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.2.0",
     "typescript": "^4.1.2"
   },
   "scripts": {
     "bootstrap": "yarn install; lerna bootstrap;",
     "package:consumer": "yarn --cwd packages/consumer dev",
-    "package:owner": "yarn --cwd packages/owner dev"
+    "package:owner": "yarn --cwd packages/owner dev",
+    "lint:ts": "eslint \"./packages/**/*.{js,ts,tsx}\"",
+    "lint:css": "yarn stylelint \"./packages/**/*.{js,ts,tsx}\"",
+    "fix": "yarn lint:ts --fix"
   },
+  "pre-commit": [
+    "fix",
+    "lint:css"
+  ],
   "dependencies": {
     "@ant-design/icons": "^4.3.0",
     "@types/styled-components": "^5.1.4",
