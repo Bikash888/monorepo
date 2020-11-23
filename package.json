@@ -10,5 +10,8 @@
   "scripts": {
     "bootstrap": "yarn install; lerna bootstrap;",
     "package:consumer": "yarn --cwd packages/consumer dev"
+  },
+  "dependencies": {
+    "styled-components": "^5.2.1"
   }
 }
