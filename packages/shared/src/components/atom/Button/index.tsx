@@ -33,27 +33,13 @@ const Wrapper = styled.div`
   display: contents;
   & .ant-btn-primary {
     background: ${theme.blue2};
-    border-color: ${({ bordercolor }: ButtonProps) => {
-      return bordercolor ? `${bordercolor} !important` : theme.blue2;
-    }};
+
     box-shadow: 0px 0px 12px rgba(28, 86, 225, 0.51);
     font-size: 16px;
     line-height: 30px;
     font-weight: 700;
   }
-  & .ant-btn-ghost {
-    border-color: ${({ bordercolor }: ButtonProps) => {
-      return bordercolor ? `${bordercolor} !important` : theme.blue2;
-    }};
-    background: ${({ background }: ButtonProps) => {
-      return background ? `${background} !important` : "transparent";
-    }};
-    box-shadow: none;
-    color: ${theme.blue2};
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 700;
-  }
+
   & .ant-btn-link {
     box-shadow: none;
     background: transparent;
@@ -72,6 +58,7 @@ const StyledButton = styled(Button)`
     box-shadow: none !important;
     color: ${theme.base};
   }
+  border-color: ${theme.blue2};
 
   border-radius: ${({ borderradius, noradius }: ButtonProps) => {
     return noradius ? "none" : borderradius ? borderradius : "100px";
@@ -96,11 +83,7 @@ const StyledButton = styled(Button)`
   background: ${({ background }: ButtonProps) => {
     return background ? background : theme.blue2;
   }};
-  box-shadow: ${({ boxshadow }: ButtonProps) => {
-    return boxshadow
-      ? `${boxshadow} !important`
-      : "0px 0px 12px rgba(28, 86, 225, 0.51)";
-  }};
+
   color: ${({ color }: ButtonProps) => {
     return color ? `${color} !important` : theme.base;
   }};

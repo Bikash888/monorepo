@@ -18,8 +18,8 @@
   },
   "scripts": {
     "bootstrap": "yarn install; lerna bootstrap;",
-    "package:consumer": "yarn --cwd packages/consumer dev",
     "package:owner": "yarn --cwd packages/owner dev",
+    "package:consumer": "yarn --cwd packages/consumer dev",
     "lint:ts": "eslint \"./packages/**/*.{js,ts,tsx}\"",
     "lint:css": "yarn stylelint \"./packages/**/*.{js,ts,tsx}\"",
     "fix": "yarn lint:ts --fix"

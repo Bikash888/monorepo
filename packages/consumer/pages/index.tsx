@@ -5,8 +5,7 @@ export default function Home() {
   return (
     <>
       <Button>
-        {" "}
-        This is a CONSUMER Page. This Button is from shared module{" "}
+        Consumer Button
       </Button>
     </>
   );

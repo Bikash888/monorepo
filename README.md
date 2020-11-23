@@ -20,8 +20,8 @@ yarn bootstrap
 
 ```
  
-yarn package:consumer //  start only consumer package  
 yarn package:owner //  start only owner package  
+yarn package:consumer //  start only consumer package  
  
 
 ```
