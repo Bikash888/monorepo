@@ -4,8 +4,7 @@ import { Button } from '@project/shared';
 export default function Home() {
   return (
     <>
-      <h2> Main App </h2>
-      <Button />
+      <Button  minheight={100}> This is a  OWNER Page. This Button is from shared module </Button>
     </>
   );
 }

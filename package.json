@@ -9,9 +9,15 @@
   },
   "scripts": {
     "bootstrap": "yarn install; lerna bootstrap;",
-    "package:consumer": "yarn --cwd packages/consumer dev"
+    "package:consumer": "yarn --cwd packages/consumer dev",
+    "package:owner": "yarn --cwd packages/owner dev"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.4",
+    "antd": "^4.8.5",
+    "next": "10.0.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "styled-components": "^5.2.1"
   }
 }

@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "main": "src/index.ts",
   "description": "contains shared components",
-  "license": "MIT",
-  "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  }
+  "license": "MIT"
+
 }
