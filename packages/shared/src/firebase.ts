@@ -2,7 +2,7 @@ import firebase from "firebase";
 import "firebase/auth";
 import "firebase/analytics";
 
-if (!firebase.apps.length) {
+if (!firebase.apps.length && process.env.NEXT_PUBLIC_FIREBASE_APP_ID) {
   firebase.initializeApp({
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
     authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -14,7 +14,7 @@ if (!firebase.apps.length) {
     measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
   });
   if (typeof window !== "undefined") {
-    firebase.analytics();
+    if (process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID) firebase.analytics();
   }
 }
 const auth = firebase.auth;
