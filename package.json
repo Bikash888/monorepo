@@ -37,6 +37,7 @@
     "@types/styled-components": "^5.1.4",
     "@zeit/next-source-maps": "^0.0.3",
     "antd": "^4.8.5",
+    "babel-plugin-styled-components": "^1.12.0",
     "firebase": "^8.1.1",
     "i18next": "^19.8.4",
     "i18next-browser-languagedetector": "^6.0.1",
