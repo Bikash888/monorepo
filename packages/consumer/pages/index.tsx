@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button } from '@project/shared';
+import React from "react";
+import { Button } from "@project/shared";
 
 export default function Home() {
   return (

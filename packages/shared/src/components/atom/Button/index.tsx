@@ -1,12 +1,12 @@
-import React, { ReactNode } from 'react';
-import styled from 'styled-components';
-import { theme } from '../../../theme';
-import { Button } from 'antd';
+import React, { ReactNode } from "react";
+import styled from "styled-components";
+import { theme } from "../../../theme";
+import { Button } from "antd";
 
-type ButtonType = 'primary' | 'link' | 'ghost';
+type ButtonType = "primary" | "link" | "ghost";
 export interface ButtonProps {
   children?: React.ReactNode;
-  htmlType?: 'button' | 'submit' | 'reset';
+  htmlType?: "button" | "submit" | "reset";
   type?: ButtonType;
   width?: string;
   fullWidth?: boolean;
@@ -61,7 +61,7 @@ const StyledButton = styled(Button)`
   border-color: ${theme.blue2};
 
   border-radius: ${({ borderradius, noradius }: ButtonProps) => {
-    return noradius ? 'none' : borderradius ? borderradius : '100px';
+    return noradius ? "none" : borderradius ? borderradius : "100px";
   }};
   margin: ${({ margin }: ButtonProps) => {
     return margin && margin;
@@ -71,12 +71,12 @@ const StyledButton = styled(Button)`
       return `${padding} !important`;
     }
     switch (type) {
-      case 'primary':
-        return '0px 36px 0px 37px';
-      case 'ghost':
-        return '0px 18px';
+      case "primary":
+        return "0px 36px 0px 37px";
+      case "ghost":
+        return "0px 18px";
       default:
-        return '0px 36px 0px 37px';
+        return "0px 36px 0px 37px";
     }
   }};
 
@@ -91,16 +91,16 @@ const StyledButton = styled(Button)`
     return fontsize && fontsize;
   }};
   font-weight: ${({ bold }: ButtonProps) => {
-    return bold && 'bold';
+    return bold && "bold";
   }};
   min-width: ${({ minwidth }: ButtonProps) => {
-    return minwidth ? `${minwidth}px` : 'auto';
+    return minwidth ? `${minwidth}px` : "auto";
   }};
   width: ${({ width }: ButtonProps) => {
-    return width ? `${width}` : 'auto';
+    return width ? `${width}` : "auto";
   }};
   min-height: ${({ minheight }: ButtonProps) => {
-    return minheight ? `${minheight}px` : 'auto';
+    return minheight ? `${minheight}px` : "auto";
   }};
 `;
 
