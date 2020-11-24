@@ -22,7 +22,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         firebase.analytics().setCurrentScreen(url);
         firebase.analytics().logEvent("screen_view", {
           screen_name: url,
-          app_name: "Skeleton-Owner",
+          app_name: "Skeleton-Consumer",
         });
       };
 
