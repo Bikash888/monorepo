@@ -8,8 +8,8 @@ if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
   });
 }
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps, err }) {
+  return <Component {...pageProps} err={err} />;
 }
 
 export default MyApp;

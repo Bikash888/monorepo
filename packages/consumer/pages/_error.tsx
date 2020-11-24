@@ -2,7 +2,7 @@ import React from "react";
 import NextErrorComponent from "next/error";
 import * as Sentry from "@sentry/node";
 
-const OwnerError = ({ statusCode, hasGetInitialPropsRun, err }) => {
+const ConsumerError = ({ statusCode, hasGetInitialPropsRun, err }) => {
   if (!hasGetInitialPropsRun && err) {
     Sentry.captureException(err);
   }
@@ -10,7 +10,7 @@ const OwnerError = ({ statusCode, hasGetInitialPropsRun, err }) => {
   return <NextErrorComponent statusCode={statusCode} />;
 };
 
-OwnerError.getInitialProps = async ({ res, err, asPath }) => {
+ConsumerError.getInitialProps = async ({ res, err, asPath }) => {
   // @ts-ignore
   const errorInitialProps = await NextErrorComponent.getInitialProps({
     res,
@@ -37,4 +37,4 @@ OwnerError.getInitialProps = async ({ res, err, asPath }) => {
   return errorInitialProps;
 };
 
-export default OwnerError;
+export default ConsumerError;
