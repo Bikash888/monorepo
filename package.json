@@ -22,11 +22,13 @@
     "package:consumer": "yarn --cwd packages/consumer dev",
     "lint:ts": "eslint \"./packages/**/*.{js,ts,tsx}\"",
     "lint:css": "yarn stylelint \"./packages/**/*.{js,ts,tsx}\"",
-    "fix": "yarn lint:ts --fix"
+    "fix": "yarn lint:ts --fix",
+    "git-add": "git add ."
   },
   "pre-commit": [
+    "lint:css",
     "fix",
-    "lint:css"
+    "git-add"
   ],
   "dependencies": {
     "@ant-design/icons": "^4.3.0",
@@ -35,6 +37,7 @@
     "@types/styled-components": "^5.1.4",
     "@zeit/next-source-maps": "^0.0.3",
     "antd": "^4.8.5",
+    "firebase": "^8.1.1",
     "i18next": "^19.8.4",
     "i18next-browser-languagedetector": "^6.0.1",
     "next": "10.0.2",
