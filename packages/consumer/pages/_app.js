@@ -1,5 +1,6 @@
 import React from "react";
 import * as Sentry from "@sentry/node";
+import "antd/dist/antd.css";
 
 if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
   Sentry.init({
