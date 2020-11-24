@@ -3,6 +3,7 @@ import { AppProps } from "next/app";
 import { firebase } from "@project/shared";
 import Router from "next/router";
 import React from "react";
+import "antd/dist/antd.css";
 
 if (typeof window !== "undefined" && process.env.NODE_ENV === "production") {
   const logEvent = (url: string) => {
