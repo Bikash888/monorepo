@@ -2,15 +2,14 @@ import * as Sentry from "@sentry/node";
 import { AppProps } from "next/app";
 import { firebase } from "@project/shared";
 import Router from "next/router";
-import React from "react"
-
+import React from "react";
 
 if (typeof window !== "undefined" && process.env.NODE_ENV === "production") {
   const logEvent = (url: string) => {
     firebase.analytics().setCurrentScreen(url);
     firebase.analytics().logEvent("screen_view", {
       screen_name: url,
-      app_name: "Skeleton",
+      app_name: "Skeleton-Owner",
     });
   };
 
