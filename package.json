@@ -22,11 +22,13 @@
     "package:consumer": "yarn --cwd packages/consumer dev",
     "lint:ts": "eslint \"./packages/**/*.{js,ts,tsx}\"",
     "lint:css": "yarn stylelint \"./packages/**/*.{js,ts,tsx}\"",
-    "fix": "yarn lint:ts --fix"
+    "fix": "yarn lint:ts --fix",
+    "git-add": "git add ."
   },
   "pre-commit": [
+    "lint:css",
     "fix",
-    "lint:css"
+    "git-add"
   ],
   "dependencies": {
     "@ant-design/icons": "^4.3.0",

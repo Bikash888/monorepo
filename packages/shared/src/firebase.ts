@@ -2,8 +2,8 @@ import firebase from "firebase";
 import "firebase/auth";
 import "firebase/analytics";
 
-const APPID = process.env.NEXT_PUBLIC_FIREBASE_APP_ID
-const MEASUREMENT = process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+const APPID = process.env.NEXT_PUBLIC_FIREBASE_APP_ID;
+const MEASUREMENT = process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID;
 
 if (!firebase.apps.length && APPID) {
   firebase.initializeApp({
