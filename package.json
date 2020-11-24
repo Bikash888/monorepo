@@ -30,6 +30,7 @@
   ],
   "dependencies": {
     "@ant-design/icons": "^4.3.0",
+    "@sentry/node": "^5.27.6",
     "@types/styled-components": "^5.1.4",
     "antd": "^4.8.5",
     "next": "10.0.2",
