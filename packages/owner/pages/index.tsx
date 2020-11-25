@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { Button } from "@project/shared";
 import About from "../assets/about2.png";

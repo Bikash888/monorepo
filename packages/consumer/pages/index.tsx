@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "@project/shared";
 import { useTranslation } from "react-i18next";
 import PencilIcon from "../assets/pencil.svg";

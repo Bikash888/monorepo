@@ -51,5 +51,7 @@ module.exports = {
     'no-async-promise-executor': 0,
     'import/no-named-as-default': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
+    'react/jsx-uses-react':0,
+    'react/react-in-jsx-scope':0
   },
 };

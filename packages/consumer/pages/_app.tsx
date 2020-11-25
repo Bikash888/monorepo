@@ -1,7 +1,7 @@
 import * as Sentry from "@sentry/node";
 import { AppProps } from "next/app";
 import { firebase } from "@project/shared";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "antd/dist/antd.css";
 import { useRouter } from "next/router";
 
