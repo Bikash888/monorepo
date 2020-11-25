@@ -6,6 +6,7 @@
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^4.8.1",
     "babel-plugin-inline-react-svg": "^1.1.2",
+    "copyfiles": "^2.4.0",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
@@ -26,7 +27,15 @@
     "lint:ts": "eslint \"./packages/**/*.{js,ts,tsx}\"",
     "lint:css": "yarn stylelint \"./packages/**/*.{js,ts,tsx}\"",
     "fix": "yarn lint:ts --fix",
-    "git-add": "git add ."
+    "git-add": "git add .",
+    "build:consumer": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope consumer build",
+    "build:owner": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope owner build",
+    "pre-deploy:owner": "rimraf public && copyfiles -au 3 packages/owner/public/assets/**/* public/ && copyfiles -au 3 packages/owner/public/**/* public/",
+    "pre-deploy:consumer": "rimraf public && copyfiles -au 3 packages/consumer/public/assets/**/* public/ && copyfiles -au 3 packages/consumer/public/**/* public/",
+    "build:gae:owner": "rimraf build && yarn run build:owner && yarn run pre-deploy:owner",
+    "build:gae:consumer": "rimraf build && yarn run build:consumer && yarn run pre-deploy:consumer",
+    "deploy:gae:owner": "yarn run build:gae:owner && gcloud app deploy app_owner.yaml --project skeleton-project",
+    "deploy:gae:consumer": "yarn run build:gae:consumer && gcloud app deploy app_consumer.yaml --project skeleton-project"
   },
   "pre-commit": [
     "lint:css",

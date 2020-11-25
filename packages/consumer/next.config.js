@@ -5,6 +5,7 @@ const nextSourceMaps = require("@zeit/next-source-maps");
 module.exports = withImages(
   nextSourceMaps(
     withTM({
+      distDir: "../../build",
       webpack: (config, { isServer }) => {
         if (!isServer) {
           config.resolve.alias["@sentry/node"] = "@sentry/browser";
