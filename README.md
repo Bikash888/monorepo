@@ -19,8 +19,8 @@ yarn bootstrap
 ## Start app
 
 ```
- 
-yarn package:owner //  start only owner package  
+yarn start            //  start all packages 
+yarn package:owner    //  start only owner package  
 yarn package:consumer //  start only consumer package  
  
 
