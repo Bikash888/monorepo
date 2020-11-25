@@ -19,9 +19,10 @@ yarn bootstrap
 ## Start app
 
 ```
-yarn start            //  start all packages 
-yarn package:owner    //  start only owner package  
-yarn package:consumer //  start only consumer package  
- 
+yarn start                //  start all packages 
+yarn package:owner        //  start only owner package  
+yarn package:consumer     //  start only consumer package  
+yarn deploy:gae:owner     //  deploy owner package on google app engine
+yarn deploy:gae:consumer  //  deploy owner package on google app engine
 
 ```
