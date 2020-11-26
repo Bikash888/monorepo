@@ -34,8 +34,8 @@
     "pre-deploy:consumer": "rimraf public && copyfiles -au 3 packages/consumer/public/assets/**/* public/ && copyfiles -au 3 packages/consumer/public/**/* public/",
     "build:gae:owner": "rimraf build && yarn run build:owner && yarn run pre-deploy:owner",
     "build:gae:consumer": "rimraf build && yarn run build:consumer && yarn run pre-deploy:consumer",
-    "deploy:gae:owner": "yarn run build:gae:owner && gcloud app deploy app_owner.yaml --project skeleton-project",
-    "deploy:gae:consumer": "yarn run build:gae:consumer && gcloud app deploy app_consumer.yaml --project skeleton-project"
+    "deploy:gae:owner": "yarn run build:gae:owner && gcloud app deploy app_owner.yaml --project XXXXXXXXX",
+    "deploy:gae:consumer": "yarn run build:gae:consumer && gcloud app deploy app_consumer.yaml --project XXXXXXXXX"
   },
   "pre-commit": [
     "lint:css",
