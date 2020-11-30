@@ -6,6 +6,7 @@ export const parameters = {
   viewport: {
     viewports: MINIMAL_VIEWPORTS,
   },
+  controls: { expanded: true }
 };
 
 export const decorators = [

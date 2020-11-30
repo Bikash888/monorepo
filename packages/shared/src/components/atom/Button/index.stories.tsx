@@ -1,26 +1,30 @@
 import React from "react";
-import { select, boolean, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
-import { ButtonComponent as Button } from "../Button";
+import { ButtonComponent } from "../Button";
 
-export default { title: "Components/Atoms/Button", component: Button };
-
-export const button = () => (
-  <Button
-    onClick={action("onClickAction")}
-    type={select(
-      "Type",
-      {
-        primary: "primary",
-        link: "link",
+export default {
+  title: "Components/Atoms",
+  component: ButtonComponent,
+  parameters: {
+    docs: {
+      description: {
+        component: "A simple button component",
       },
-      "primary"
-    )}
-    fontSize={text("Font Size", "16px")}
-    block={boolean("Show in full Size", false)}
-    disabled={boolean("Disabled", false)}
-    loading={boolean("Loading", false)}
-  >
-    Button
-  </Button>
+    },
+  },
+  args: {
+    type: "primary",
+  },
+  argTypes: {
+    color: {
+      description: "Color of the text",
+      control: "color",
+    },
+  },
+};
+const Template = (args) => (
+  <ButtonComponent onClick={action("onClickAction")} {...args}>
+    Hello
+  </ButtonComponent>
 );
+export const Button = Template.bind({});
