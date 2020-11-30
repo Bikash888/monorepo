@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { theme } from "../../../theme";
 import { Button } from "antd";
 
-type ButtonType = "primary" | "link" | "ghost";
+type ButtonType = "primary" | "link";
 export interface ButtonProps {
   children?: React.ReactNode;
   htmlType?: "button" | "submit" | "reset";
   type?: ButtonType;
   width?: string;
-  fullWidth?: boolean;
+  block?: boolean;
   padding?: string;
   loading?: boolean;
   disabled?: boolean;
@@ -22,7 +22,7 @@ export interface ButtonProps {
   noradius?: boolean;
   typography?: any;
   color?: string;
-  fontsize?: string;
+  fontSize?: string;
   bold?: boolean;
   margin?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -73,8 +73,6 @@ const StyledButton = styled(Button)`
     switch (type) {
       case "primary":
         return "0px 36px 0px 37px";
-      case "ghost":
-        return "0px 18px";
       default:
         return "0px 36px 0px 37px";
     }
@@ -87,32 +85,38 @@ const StyledButton = styled(Button)`
   color: ${({ color }: ButtonProps) => {
     return color ? `${color} !important` : theme.base;
   }};
-  font-size: ${({ fontsize }: ButtonProps) => {
-    return fontsize && fontsize;
+  font-size: ${({ fontSize }: ButtonProps) => {
+    return fontSize && fontSize;
   }};
   font-weight: ${({ bold }: ButtonProps) => {
     return bold && "bold";
   }};
   min-width: ${({ minwidth }: ButtonProps) => {
-    return minwidth ? `${minwidth}px` : "auto";
+    return minwidth && `${minwidth}px`;
   }};
   width: ${({ width }: ButtonProps) => {
-    return width ? `${width}` : "auto";
+    return width && `${width}`;
   }};
   min-height: ${({ minheight }: ButtonProps) => {
-    return minheight ? `${minheight}px` : "auto";
+    return minheight && `${minheight}px`;
   }};
 `;
 
 export const ButtonComponent: React.FC<ButtonProps> = ({
   children,
   htmlType,
+  loading,
   onClick,
   ...rest
 }) => {
   return (
     <Wrapper {...rest}>
-      <StyledButton onClick={onClick} htmlType={htmlType} {...rest}>
+      <StyledButton
+        onClick={onClick}
+        htmlType={htmlType}
+        loading={loading}
+        {...rest}
+      >
         {children}
       </StyledButton>
     </Wrapper>

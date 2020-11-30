@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withKnobs, select, boolean } from "@storybook/addon-knobs";
+import { withKnobs, select, boolean, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 import { ButtonComponent } from "../Button";
 
@@ -14,11 +14,11 @@ components.addDecorator(withKnobs).add("Button", () => {
         {
           primary: "primary",
           link: "link",
-          ghost: "ghost",
         },
         "primary"
       )}
-      fullWidth={boolean("Show in full Size", true)}
+      fontSize={text("Font Size", "16px")}
+      block={boolean("Show in full Size", false)}
       disabled={boolean("Disabled", false)}
       loading={boolean("Loading", false)}
     >

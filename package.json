@@ -4,7 +4,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "^6.1.9",
     "@storybook/addon-knobs": "^6.1.9",
-    "@storybook/addon-links": "^6.1.9",
+    "@storybook/addon-viewport": "^6.1.9",
     "@storybook/react": "^6.1.9",
     "@types/react": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.8.1",

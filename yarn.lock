@@ -2669,23 +2669,22 @@
     react-select "^3.0.8"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addon-links@^6.1.9":
+"@storybook/addon-viewport@^6.1.9":
   version "6.1.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.1.9.tgz#fcd254a7685a09868c27a7162f4d0671eebf9f4b"
-  integrity sha512-z1ih0lyVr8RMlw0oxXfu7OWjHhyFWasZMivuJ6Q/XGAPS8T/Ohfct9mnNYFYeAtVeUUHI1IUavrOPHzcJnDkkg==
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.1.9.tgz#7160b7598a34b8c19ff7571b781329fe8ad5de8d"
+  integrity sha512-+raES4+fDc0eCnpF4JW5kYwOTFEGiVmjmhFSrsXXuRXNGrCx4s5t9Bpklwm4YswIgmubB0Fpd0kaQS2LjRz94Q==
   dependencies:
     "@storybook/addons" "6.1.9"
+    "@storybook/api" "6.1.9"
     "@storybook/client-logger" "6.1.9"
+    "@storybook/components" "6.1.9"
     "@storybook/core-events" "6.1.9"
-    "@storybook/csf" "0.0.1"
-    "@storybook/router" "6.1.9"
-    "@types/qs" "^6.9.0"
+    "@storybook/theming" "6.1.9"
     core-js "^3.0.1"
     global "^4.3.2"
+    memoizerific "^1.11.3"
     prop-types "^15.7.2"
-    qs "^6.6.0"
     regenerator-runtime "^0.13.7"
-    ts-dedent "^2.0.0"
 
 "@storybook/addons@6.1.9":
   version "6.1.9"
