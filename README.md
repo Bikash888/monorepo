@@ -24,5 +24,8 @@ yarn package:owner        //  start only owner package
 yarn package:consumer     //  start only consumer package  
 yarn deploy:gae:owner     //  deploy owner package on google app engine
 yarn deploy:gae:consumer  //  deploy owner package on google app engine
+"test":                   //  run test
+"storybook":              //  run storybook
+"build-storybook":        //  generate static web app for storybook
 
 ```
