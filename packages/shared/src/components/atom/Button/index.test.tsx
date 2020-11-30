@@ -16,7 +16,7 @@ describe("Button Component", () => {
 
   it("should be disabled", () => {
     const { queryByText } = render(<Button disabled={true}>Click me</Button>);
-    expect(queryByText("Click me")).not.toBeDisabled();
+    expect(queryByText("Click me").closest("button")).toBeDisabled();
   });
 
   afterEach(cleanup);
