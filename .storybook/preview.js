@@ -1,6 +1,5 @@
-import React from 'react';
-import { addDecorator } from '@storybook/react';
-import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
+import React from "react";
+import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
 import "antd/dist/antd.css";
 
 export const parameters = {
@@ -9,4 +8,6 @@ export const parameters = {
   },
 };
 
-addDecorator(storyFn => <div style={{ padding: '16px' }}>{storyFn()}</div>);
+export const decorators = [
+  (storyFn) => <div style={{ padding: "16px" }}>{storyFn()}</div>,
+];
