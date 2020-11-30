@@ -1,3 +1,4 @@
 module.exports = {
-  distDir: "build",
+  distDir: "./packages/consumer/.next",
+  // distDir: "./packages/owner/.next",
 };
