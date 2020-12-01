@@ -2,8 +2,8 @@ import * as Sentry from "@sentry/node";
 import { AppProps } from "next/app";
 import { firebase } from "@project/shared";
 import { useEffect } from "react";
-import "antd/es/button/style/index.css";
 import { useRouter } from "next/router";
+import "../utils/css-imports";
 
 if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
   Sentry.init({
