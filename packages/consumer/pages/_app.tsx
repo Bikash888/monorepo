@@ -2,7 +2,7 @@ import * as Sentry from "@sentry/node";
 import { AppProps } from "next/app";
 import { firebase } from "@project/shared";
 import { useEffect } from "react";
-import "antd/dist/antd.css";
+import "../utils/css-imports";
 import { useRouter } from "next/router";
 
 if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
