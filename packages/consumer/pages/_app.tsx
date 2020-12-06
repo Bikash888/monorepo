@@ -1,6 +1,6 @@
 import * as Sentry from "@sentry/node";
 import { AppProps } from "next/app";
-import { firebase } from "@project/shared";
+import { analytics } from "@project/shared";
 import { useEffect } from "react";
 import "../utils/css-imports";
 import { useRouter } from "next/router";
@@ -19,8 +19,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
       const logEvent = (url: string) => {
-        firebase.analytics().setCurrentScreen(url);
-        firebase.analytics().logEvent("screen_view", {
+        analytics().setCurrentScreen(url);
+        analytics().logEvent("screen_view", {
           screen_name: url,
           app_name: "Skeleton-Consumer",
         });
