@@ -32,8 +32,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       });
 
       logEvent(window.location.pathname);
+      return () => {
+        routers.events.off("routeChangeComplete", logEvent);
+      };
     }
-  }, [routers.events]);
+  }, []);
   return <Component {...pageProps} />;
 };
 
