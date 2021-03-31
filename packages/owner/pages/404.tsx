@@ -1,4 +1,4 @@
-import { Result } from "antd";
+import { Result } from 'antd';
 
 const PageNotFound = () => {
   return (
