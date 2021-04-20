@@ -40,7 +40,7 @@
     "nextstart:consumer": "yarn --cwd ./packages/consumer start",
     "nextstart:owner": "yarn --cwd ./packages/owner start",
     "next:start": "node -r ./dotenv.config.js node_modules/.bin/run-p --print-label nextstart:*",
-    "build:consumer": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope consumer build",
+    "build:consumer": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope consumer build && node -r ./dotenv.config.js node_modules/.bin/lerna run --scope consumer export",
     "build:owner": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope owner build",
     "pre-deploy:owner": "rimraf public && copyfiles -au 3 packages/owner/public/assets/**/* public/ && copyfiles -au 3 packages/owner/public/**/* public/",
     "pre-deploy:consumer": "rimraf public && copyfiles -au 3 packages/consumer/public/assets/**/* public/ && copyfiles -au 3 packages/consumer/public/**/* public/",
